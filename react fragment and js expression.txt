@@ -15,3 +15,23 @@ ReactDOM.render(
   ,
   document.getElementById('root')
 );
+
+
+********************************************************
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+const F_L_name = "saumya sharma";
+
+ReactDOM.render(
+  <React.Fragment>
+  <h1> Welcome To Our Website </h1>
+    <p>My Name is {F_L_name} and i am {12+12} years old</p>   // f_L_name written under {} is used as expression or we can do 
+  
+</React.Fragment>
+  ,
+  document.getElementById('root')
+);
+
