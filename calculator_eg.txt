@@ -1,0 +1,58 @@
+
+Index.js
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {add, sub,mul,div}from './Calc';
+
+ReactDOM.render(
+  <>
+
+  <ol>
+    <li>Sum of Two number is {add(10,20)}</li>
+    <li>Subtraction of Two number is {sub(40, 4)}</li>
+    <li>Multiplication of Two number is {mul(40, 4)}</li>
+    <li>Division of Two number is {div(40, 4)}</li>
+
+  </ol>
+
+
+  </>, document.getElementById("root")
+
+
+
+
+);
+
+****************************
+
+Calc.js
+
+import React from 'react';
+
+function add(a,b){
+    let sum = a+b;
+    return sum;
+}
+
+function sub(a,b){
+    let sub = a-b;
+    return sub;
+}
+
+function mul(a,b){
+
+    let mul= a*b;
+    return mul;
+}
+
+
+function div(a,b){
+
+    let div= a/b;
+    return div;
+}
+
+export {add, sub,mul,div};
