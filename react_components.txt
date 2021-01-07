@@ -1,0 +1,109 @@
+index.js:-
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+
+  <App/>
+, document.getElementById("root")
+
+)
+
+
+Component:-
+
+import React from 'react';
+
+function List(){
+   return (<ol>
+        <li>Saumya</li>
+        <li>Sharma</li>
+        <li>My hobby is singing</li>
+        <li> i am a software engineer</li>
+    </ol>
+   );
+}
+
+export default List;
+
+
+*************************************************
+
+import React from 'react';
+import ReactDom from 'react-dom';
+import Para from './Para';
+import List from './List';
+import Heading from './Heading';
+
+
+function App(){
+return(
+    
+        <React.Fragment>
+    <Heading/>
+    <Para/>
+    <List/>
+    </React.Fragment>
+);
+
+}
+
+export default App;
+
+
+***********************************************
+
+import React from 'react';
+
+function Para(){
+    return <p> This is my world</p>
+}
+
+export default Para;
+
+
+**********************************************
+
+import react from 'react';
+
+
+function Heading(){
+return <h1> my name is Saumya </h1>
+
+}
+
+export default Heading;
+
+*********************************************
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.Heading{
+  color: #fa9191;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 100;
+  text-shadow: 0px 2px 4px #ffe9ff
+
+}
+
+.img_style{
+
+display: flex;
+justify-content: center;
+
+}
+
+
+
+
+.img_style{
+
+  width: 200px;
+  height:400px;
+  margin: auto;
+
+
+}
