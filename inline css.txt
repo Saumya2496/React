@@ -1,0 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const name= "saumya sharma";
+const img1= "https://picsum.photos/400/400" ;
+const img2= "https://picsum.photos/seed/picsum/400/400";
+const img3="https://picsum.photos/id/237/400/400" ;
+
+const heading={
+  color: '#fa9191',
+  textTransform :'capitalize',
+  textAlign: 'center'
+}
+
+
+ReactDOM.render(
+  <>
+  <h1 style= {heading}>Hi welcome to {name}'s gallery</h1>
+  <div className = "img_style">
+  <img src= {img1} />
+  <img src= {img2} />
+  <img src= {img3} />
+  </div>
+</>, document.getElementById("root")
+);
+
