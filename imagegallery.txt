@@ -1,0 +1,56 @@
+index.js
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css'
+const name= "saumya sharma";
+const img1= "https://picsum.photos/400/400" ;
+const img2= "https://picsum.photos/seed/picsum/400/400";
+const img3="https://picsum.photos/id/237/400/400" ;
+
+ReactDOM.render(
+  <>
+  <h1 className= "Heading">Hi welcome to {name}'s gallery</h1>
+  <div className = "img_style">
+  <img src= {img1} />
+  <img src= {img2} />
+  <img src= {img3} />
+  </div>
+</>, document.getElementById("root")
+);
+
+
+
+index.css
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.Heading{
+  color: #fa9191;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 100;
+  text-shadow: 0px 2px 4px #ffe9ff
+
+}
+
+.img_style{
+
+display: flex;
+justify-content: center;
+
+}
+
+
+
+
+.img_style{
+
+  width: 200px;
+  height:400px;
+  margin: auto;
+
+
+}
