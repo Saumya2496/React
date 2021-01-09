@@ -1,5 +1,8 @@
 React Props :
 
+Props are being passed to components like function arguments
+Props can only be passed to components in one-way (parent to child)
+Props data is immutable (read-only)
 stands for properties,  React Props are like function arguments in javascript and attributes in HTML.
 
 
