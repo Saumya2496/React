@@ -76,6 +76,8 @@ return <h1> my name is Saumya </h1>
 
 export default Heading;
 
+‐---------------
+
 *********************************************
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
