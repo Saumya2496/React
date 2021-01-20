@@ -1,0 +1,116 @@
+Users.js ****************************************
+
+
+import React from 'react';
+import User from './User';
+
+
+class Users extends React.Component {
+    state= {
+        users:[
+            {name: "John", age: 20},
+            {name: "John1", age:30},
+            {name:"John2", age:40}
+
+    ],
+    Title:"Users List"
+    }
+
+    makemeYounger = () => {
+        const newState= this.state.users.map((users)=> {
+            const newTemp= users;
+            newTemp.age -=10;
+            return newTemp;
+        });
+        this.setState({
+            newState
+        })
+    }
+
+
+    render () {
+
+        return(
+            <> 
+            <h1>{this.state.Title}</h1>
+            <button onClick= {this.makemeYounger}> Click me </button> <br/>
+            Name:{this.state.users[0].name} | Age:{this .state.users[0].age}
+            <br/>
+            Name:{this.state.users[1].name} | Age:{this .state.users[1].age}
+            <br/>
+            Name:{this.state.users[2].name} | Age:{this .state.users[2].age}
+            
+            
+            </>
+        )
+       
+    }
+
+}
+
+export default Users;
+
+/*  static h ye 
+return (<div>
+    <User age= "20">John</User>
+    <User age= "30">John1</User>
+    <User age= "40">John2</User>
+</div>
+) */
+
+
+***********************************************************
+user.js
+
+import React from 'react';
+
+const User =(props)=> {
+
+return (<div>Name: {props.children} | Age: {props.age}    
+</div>)
+}
+
+export default User;
+
+/*jo b properties di h users me usko access krane k liy props.age likha */
+/*name ko access krane k liy jo ki sirf ek content h  we used props.children*/
+
+
+
+*************************************************************
+App.js
+
+
+import React, {component} from 'react';
+import Users from './Users';
+
+class App extends React.Component{
+        render(){
+                return (
+                        <>
+                        <div className="App">
+                                <Users/>
+                                </div>
+                        </>
+                );
+        }
+}
+
+export default App;
+
+
+
+*********************************************************
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+
+ReactDOM.render(<App/>,document.getElementById('root')
+);
+
+
+
+
+
