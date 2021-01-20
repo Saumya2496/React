@@ -1,0 +1,52 @@
+onclick change state:---
+
+***********************************
+
+import React from 'react';
+import User from './User';
+
+class Users extends React.Component{
+
+    state = {
+        name:"saumya"
+    }
+
+    changename = ()=> {
+        this.setState({
+            name:"sharma"
+        })
+    }
+    render(){
+
+        return(
+
+            <>
+            <h1> change state </h1> <br/>
+            <button onClick= {this.changename}> click me </button> <br/>
+            {this.state.name}
+            </>
+        );
+    }
+}
+
+export default Users;
+
+
+***********************************************
+
+import React, {component} from 'react';
+import Users from './Users';
+
+class App extends React.Component{
+        render(){
+                return (
+                        <>
+                        <div className="App">
+                                <Users/>
+                                </div>
+                        </>
+                );
+        }
+}
+
+export default App;
