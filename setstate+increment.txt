@@ -1,0 +1,32 @@
+import React from 'react';
+
+class App extends React.Component {
+        
+            state = {
+                counter: 0
+            }
+     
+        handleClick = (e) => {
+                this.setState({counter:this.state.counter+1})
+            }
+            
+        render() {
+            return(<>
+                <h2> Seconds Elapsed: {this.state.counter} </h2>
+                <button onClick = {this.handleClick}> Increment Counter </button>
+            </>)
+        }
+    }
+
+    export default App;
+    
+
+ 
+
+
+
+
+ 
+
+
+
