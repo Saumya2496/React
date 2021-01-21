@@ -26,6 +26,25 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
+********************************************
+The price is not updated .. This is because setState() is asynchronous, the price gets updated before quantity gets updated. 
+
+To overcome the above problem, we can pass a callback function to the setState() ...
+
+
+
+
+ update = () => {
+                this.setState({quantity:5},()=>{
+                        if(this.state.quantity == 5) {
+                                this.setState({price:2000-100})
+                        }
+                })
+        }
+
     
 
  
