@@ -1,0 +1,73 @@
+Highlights:
+
+Passing data
+
+Accessing data
+
+Demo steps:
+
+Create 2 components as mentioned below:
+
+1. App - It holds state and handles button click
+
+2. Child - It takes result from Timer component and displays it
+
+import React from 'react';
+import Child from './Parenttochild/Child';
+
+class App extends React.Component {
+       
+               state = 
+               {
+                timeelapsed:0
+               };
+
+               start= ()=>{
+                       this.setState({timeelapsed: this.state.timeelapsed+1})
+               }
+
+               handleclick = (e) =>{
+                        this.Interval= setInterval(this.start, 1000);
+               }
+      
+        render() {
+               return(<>
+                         
+                        <button onClick={this.handleclick}>Update</button>
+                        <Child new ={this.state.timeelapsed}/>
+                </>)}
+               
+}
+
+export default App;
+
+
+Child component :--
+import React from 'react';
+
+
+class Child extends React.Component{
+render(){
+
+    return (
+        <> 
+        <h3> Timer:{this.props.new}</h3>
+        </>
+    )
+
+
+}
+}
+
+export default Child;
+
+
+
+
+As we want to display result from Child component, we are passing state (which holds result) to Child component.
+
+When data is passed from parent component to child component, it becomes property of child component
+
+These properties are immutable and are accessible as this.props.new in Child component
+    
+_________________________________________________________________________________________________________
