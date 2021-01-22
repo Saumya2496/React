@@ -1,0 +1,37 @@
+import React from 'react';
+
+class App extends React.Component {
+       
+               state = 
+               {
+                timeelapsed:0
+               };
+
+               start= ()=>{
+                       this.setState({timeelapsed: this.state.timeelapsed+1})
+               }
+
+               handleclick = (e) =>{
+                        this.Interval= setInterval(this.start, 1000);
+               }
+      
+        render() {
+               return(<>
+                        <h1> Timer:{this.state.timeelapsed}</h1>
+                        <button onClick={this.handleclick}>Update</button>
+                </>)}
+               
+}
+
+export default App;
+    
+
+ 
+
+
+
+
+ 
+
+
+
