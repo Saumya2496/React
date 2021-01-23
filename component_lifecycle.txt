@@ -1,0 +1,119 @@
+COMPONENT LIFE CYCLE
+****************************
+
+1-0 RENDER():-
+The render() method is required, and is the method that actually outputs the HTML to the DOM.
+
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <h1>This is the content of the App component</h1>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+*****************************************************
+
+
+
+2-)
+ComponentDidMoint:-->
+The componentDidMount() method is called after the component is rendered.
+
+
+
+
+
+import React from 'react';
+
+
+class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {favoritecolor: "red"};
+        }
+        componentDidMount() {
+          setTimeout(() => {
+            this.setState({favoritecolor: "yellow"})
+          }, 1000)
+        }
+        render() {
+          return (
+            <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+          );
+        }
+      }
+      
+      
+
+export default App;
+
+
+
+*********************************************
+UPFATING
+
+
+A component is updated whenever there is a change in the component's state or props.
+
+React has five built-in methods that gets called, in this order, when a component is updated:
+
+getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+
+
+
+1:-
+
+If the component gets updated, the getDerivedStateFromProps() method is called:
+
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  static getDerivedStateFromProps(props, state) {
+    return {favoritecolor: props.favcol };
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App favcol="yellow"/>, document.getElementById('root'));
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+
+ 
+
+
+
