@@ -33,6 +33,8 @@ import React from 'react';
 
 class App extends React.Component {
         constructor(props) {
+        
+        
           super(props);
           this.state = {favoritecolor: "red"};
         }
@@ -99,6 +101,40 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App favcol="yellow"/>, document.getElementById('root'));
+
+
+
+
+2)- shouldComponentUpate()
+
+shouldComponentUpdate
+In the shouldComponentUpdate() method you can return a Boolean value that specifies whether React should continue with the rendering or not.
+
+The default value is true.
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {favoritecolor: "red"};
+  }
+  shouldComponentUpdate() {
+    return false;
+  }
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
+  }
+  render() {
+    return (
+      <div>
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+
 
 
 
