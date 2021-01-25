@@ -12,6 +12,8 @@ Create 2 components as mentioned below:
 
 2. Child - It takes result from Timer component and displays it
 
+
+
 import React from 'react';
 import Child from './Parenttochild/Child';
 
