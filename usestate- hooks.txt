@@ -29,6 +29,36 @@ return(
 
 export default App;
 
+2nd example:
+____________________________________________
+
+
+import React, {useState} from 'react';
+import './App.css';
+
+const App = () => {
+    
+    const [val, setnumber]= useState(0);
+    
+    
+    const changename = () =>{
+        setnumber(val+1)
+    }
+        
+    
+    
+    
+    return (
+        <div>
+            <h1>{val}</h1>
+            <button className= "btn" onClick={changename}> Click me </button>
+        </div>
+    )
+}
+
+export default App;
+
+
 
 
 
