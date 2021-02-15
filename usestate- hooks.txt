@@ -60,6 +60,49 @@ export default App;
 
 
 
+((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+
+usestare array
+
+
+import React, {useState} from 'react';
+
+
+const UsestateArray = () => {
+
+    const BioData = [{
+        id:0, myname:"saumya", age:25
+    }, 
+    {
+        id:0, myname:"sharma", age:25
+    }]
+
+    console.log(BioData)
+
+    const [currarray, setarray] = useState(BioData)
+    const cleardata = ()=>{
+        setarray([]);
+    }
+
+
+    return (
+        <>
+        {
+            BioData.map((currele)=>{
+                    return <h1 className="h1style"> {currele.myname}& age:{currele.age} </h1>
+            })
+        }
+        <button className ="btn" onClick={cleardata}> clear</button>
+            {/* <h1 classname="h1style"> enjoy your holiday </h1> */}
+        </>
+    )
+}
+
+export default UsestateArray
+
+
+
+
 
 
 ****************************************************************
