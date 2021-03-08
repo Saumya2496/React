@@ -24,6 +24,7 @@ class App extends React.Component {
                                                  <td>{employee.name}</td>
                                                  <td>{employee.designation}</td>
                                          </tr>)
+                                         
                                  })
                                  }
                                  
